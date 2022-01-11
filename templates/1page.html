@@ -10,11 +10,13 @@
     <div>
         {{ addtitle(1) }}
     </div>
+    {% include "/111/test.html" %}
     <ul>
         {% for row in rows %}
             {% set gu_name = row.MSRSTE_NM %}
             {% set gu_mise = row.IDEX_MVL %}
             <li>{{ gu_name }}: {{ gu_mise }}</li>
         {% endfor %}
+        {# 주석 #}
     </ul>
 {% endblock %}

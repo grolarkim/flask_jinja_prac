@@ -83,7 +83,8 @@ def four_page():
 @app.route('/5page/')
 def five_page():
     msg = '이것은 메시지'
-    return render_template("5page.html", msg=msg)
+    num = '123'
+    return render_template("5page.html", msg=msg, num=num)
 
 ## 끝 ################################################################################################################################
 
