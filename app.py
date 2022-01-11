@@ -12,7 +12,6 @@ db = client.dbsparta
 
 fs = gridfs.GridFS(db)
 
-
 @app.route('/')
 def main():
     return render_template("index.html")
@@ -78,6 +77,13 @@ def three_page():
 @app.route('/4page/')
 def four_page():
     return render_template("4page.html")
+
+## 5페이지 ################################################################################################################################
+
+@app.route('/5page/')
+def five_page():
+    msg = '이것은 메시지'
+    return render_template("5page.html", msg=msg)
 
 ## 끝 ################################################################################################################################
 

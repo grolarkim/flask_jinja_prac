@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}설명페이지{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    h3{
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+    <div>
+        {{ addtitle('진자템플릿 설명') }}
+    </div>
+    <div class="content_wrap">
+        <a href="https://jinja.palletsprojects.com/en/3.0.x/">공식문서(어렵다)</a> <br> <br>
+        <h3>알아야하는것들</h3> <br>
+        변수, 변수 생성 
+        {% raw %}
+        ({{변수}} , {% set 변수 = 데이터 %})
+        {% endraw %}
+        <br>
+        템플릿 상속, 매크로 생성 <br>
+        for문 (loop.index등의 변수) <br>
+        if문 <br>
+        형변환 (int, tojson, 등) <br>
+        기타 (공백 제거/유지, 숫자별 콤마, 이스케이프 등) <br>
+        <br>
+        <a href="https://thalals.tistory.com/162">[Flask] jinja2 템플릿 언어 (진자 템플릿)</a> <br>
+        <a href="https://snacky.tistory.com/7">Jinja2템플릿엔진기본문법</a> <br>
+        <a href="https://hleecaster.com/flask-jinja2/">파이썬 Flask 사용법 2 (Jinja2 템플릿, 변수, 조건문/반복문)</a> <br>
+    </div>
+{% endblock %}
