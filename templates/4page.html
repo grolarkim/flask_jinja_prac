@@ -34,9 +34,11 @@
     }
 </style>
 <script>
+        
     function slide_btn(num) {
-        let c_num = -((num-1)*800)
-        $('.slider').css('transform', `translateX(${c_num}px)`)
+        let c_num = -((num-1)*800);
+        document.querySelector('.slider').style.transform = `translateX(${c_num}px)`
+        
     }
 
 </script>
@@ -63,10 +65,12 @@
     </div>
 </div>
 <div class="btn_wrap">
+    <button class="btn_prev" onclick="slide_btn(1)"><</button>
     <button class="btn1" onclick="slide_btn(1)">1</button>
     <button class="btn2" onclick="slide_btn(2)">2</button>
     <button class="btn3" onclick="slide_btn(3)">3</button>
     <button class="btn4" onclick="slide_btn(4)">4</button>
+    <button class="btn_next" onclick="slide_btn(4)">></button>
 </div>
 
 
